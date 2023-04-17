@@ -17,7 +17,7 @@ function closeModalWindows() {
 
 btnClose.addEventListener('click', closeModalWindows);
 overlay.addEventListener('click', closeModalWindows);
-document.addEventListener('keydown', function (event) {
+window.addEventListener('keydown', function (event) {
   if (event.key === 'Escape' && !modalWindow.classList.contains('hidden')) {
     closeModalWindows();
   }
