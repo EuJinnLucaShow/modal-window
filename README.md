@@ -1,1 +1,1 @@
-# Project number 2. modal window
+# Project #2. Modal Window.
