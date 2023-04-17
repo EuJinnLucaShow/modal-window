@@ -4,5 +4,21 @@ const btnClose = document.querySelector('.close-modal-window');
 const overlay = document.querySelector('.overlay');
 
 for (let i = 0; i < btnShow.length; i++) {
-  btnShow[i].addEventListener('click', () => {});
+  btnShow[i].addEventListener('click', () => {
+    modalWindow.classList.remove('hidden');
+    overlay.classList.remove('hidden');
+  });
 }
+
+function closeModalWindows() {
+  modalWindow.classList.add('hidden');
+  overlay.classList.add('hidden');
+}
+
+btnClose.addEventListener('click', closeModalWindows);
+overlay.addEventListener('click', closeModalWindows);
+document.addEventListener('keydown', function (event) {
+  if (event.key === 'Escape' && !modalWindow.classList.contains('hidden')) {
+    closeModalWindows();
+  }
+});
